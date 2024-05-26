@@ -1,4 +1,4 @@
-.data-container {
+/* .data-container {
     width: 600px;
     margin: 0 auto;
     padding: 20px;
@@ -10,4 +10,101 @@
 
 .data-item {
     margin-bottom: 15px;
+} */
+.data-container {
+    width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #f9f9f9, #e0e0e0);
+    margin-top: 150px;
+    animation: fadeInBg 1s ease-in-out, slideIn 1s ease-in-out;
+}
+
+.data-field {
+    margin-bottom: 15px;
+    opacity: 0;
+    animation: fadeInText 1s ease-in-out forwards;
+    animation-delay: 1s;
+    background: linear-gradient(135deg, #ffffff, #e9ecef);
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.5s, color 0.5s;
+}
+
+.data-field:hover {
+    background: linear-gradient(135deg, #e9ecef, #ffffff);
+    color: #d5461b;
+}
+
+.title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeInTitle 1s ease-in-out forwards;
+    animation-delay: 0.5s;
+    background: linear-gradient(135deg, #ffffff, #e0e0e0);
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.5s, color 0.5s;
+}
+
+.title:hover {
+    background: linear-gradient(135deg, #e0e0e0, #ffffff);
+    color: #ff2200;
+}
+
+@keyframes fadeInBg {
+    from {
+        opacity: 0;
+        background-color: #ffffff;
+    }
+
+    to {
+        opacity: 1;
+        background-color: #f9f9f9;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(50px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInTitle {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes changeColor {
+    from {
+        color: #000;
+    }
+
+    to {
+        color: #ff6f00;
+    }
 }
